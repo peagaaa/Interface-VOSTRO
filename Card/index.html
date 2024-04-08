@@ -1,0 +1,293 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Card with effect</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            * {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }
+      
+            body {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              font-family: Verdana, Tahoma, sans-serif;
+            }
+            .wrapper {
+              width: 300px;
+              height: 400px;
+              border-radius: 10px;
+              box-shadow: 0;
+              box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+              position: relative;
+              overflow: hidden;
+              background-color: #3c104b;
+            }
+      
+            .card {
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+      
+            .card img {
+              width: 100%;
+              height: 50%;
+              object-fit: cover;
+              border-radius: 10px 10px 0 0;
+            }
+      
+            .card__cap h2 {
+              text-align: center;
+              margin-bottom: 20px;
+              color: rgb(255, 255, 255);
+              font-weight: 600;
+            }
+      
+            .card__cap p {
+              color: white;
+            }
+      
+            .card__desc {
+              padding: 10px;
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              grid-gap: 10px;
+            }
+      
+            .card__desc p {
+              text-align: center;
+              font-size: 16px;
+              text-transform: capitalize;
+            }
+      
+            .card__details, .card__details2, .card__details3 {
+              border-radius: 10px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: linear-gradient(115deg, #3c104b, #632baa);
+              padding: 20px;
+              transform: translateY(-100%);
+              transition: transform 0.3s ease-out;
+            }
+      
+            .card__type {
+              font-size: 26px;
+              text-transform: uppercase;
+              color: white;
+              text-align: center;
+              margin-bottom: 30px;
+              border-bottom: 1px solid #eeeeee67;
+              padding-bottom: 10px;
+            }
+            .card__price {
+              text-align: center;
+              font-size: 46px;
+              color: white;
+              font-weight: bold;
+            }
+            .card__price sub,
+            .card__price sup {
+              font-size: 16px;
+              font-weight: normal;
+            }
+            .card__price sup {
+              margin-right: 5px;
+            }
+            .card__price sub {
+              margin-left: -5px;
+            }
+      
+            .card__feactures {
+              margin-top: 20px;
+              color: white;
+            }
+            .feacture {
+              padding: 10px;
+              font-size: 16px;
+            }
+            .feacture:not(:last-child) {
+              border-bottom: 1px solid #eeeeee67;
+            }
+      
+            .buy__btn, .buy__btn2, .buy__btn3,
+            .det__btn, .det__btn2, .det__btn3 {
+              border: none;
+              outline: none;
+              padding: 15px 30px;
+              border-radius: 5px;
+              background-color: white;
+              color: black;
+              display: block;
+              margin: 10px auto;
+              font-size: 16px;
+              width: 100%;
+              cursor: pointer;
+            }
+      
+            .det__btn, .det__btn2, .det__btn3 {
+              background-color: #9311bbdc;
+              width: 90%;
+              color: white;
+            }
+      
+            .card__details.open, .card__details2.open, .card__details3.open {
+              transform: translateY(0);
+            }
+
+            .id_card1, .id_card2{
+                margin-right: 1rem;
+            }
+          </style>
+      </head>
+      <body>
+        <div class="id_card1">
+          <div class="wrapper">
+            <figure class="card">
+              <img src="../Projeto VOSTRO definitive version/img/porcheImg.jpeg" alt="card image" />
+
+              <figcaption class="card__cap">
+                <h2>CARRO LEGAL</h2>
+                <div class="card__desc">
+                  <p>MARCA</p>
+                  <p>MODELO</p>
+                  <p>ANO</p>
+                  <p>COR</p>
+                </div>
+              </figcaption>
+              <button class="det__btn">Detalhes</button>
+            </figure>
+
+            <div class="card__details">
+              <p class="card__type">Valor</p>
+              <h6 class="card__price"><sup>R$</sup>6.500 <sub>/12X</sub></h6>
+              <div class="card__feactures">
+                <div class="feacture">12 Meses de garântia</div>
+                <div class="feacture">1º Manutenção grátis</div>
+                <div class="feacture">Ar-condicionado</div>
+              </div>
+              <button class="buy__btn">Add Carrinho</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="id_card2">
+            <div class="wrapper">
+              <figure class="card">
+                <img src="../Projeto VOSTRO definitive version/img/subaruImg.jpg" alt="card image" />
+  
+                <figcaption class="card__cap">
+                  <h2>CARRO LEGAL</h2>
+                  <div class="card__desc">
+                    <p>MARCA</p>
+                    <p>MODELO</p>
+                    <p>ANO</p>
+                    <p>COR</p>
+                  </div>
+                </figcaption>
+                <button class="det__btn2">Detalhes</button>
+              </figure>
+  
+              <div class="card__details2">
+                <p class="card__type">Valor</p>
+                <h6 class="card__price"><sup>R$</sup>6.500 <sub>/12X</sub></h6>
+                <div class="card__feactures">
+                  <div class="feacture">12 Meses de garântia</div>
+                  <div class="feacture">1º Manutenção grátis</div>
+                  <div class="feacture">Ar-condicionado</div>
+                </div>
+                <button class="buy__btn2">Add Carrinho</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="id_card3">
+            <div class="wrapper">
+              <figure class="card">
+                <img src="../Projeto VOSTRO definitive version/img/civicImg.jpeg" alt="card image" />
+  
+                <figcaption class="card__cap">
+                  <h2>CARRO LEGAL</h2>
+                  <div class="card__desc">
+                    <p>MARCA</p>
+                    <p>MODELO</p>
+                    <p>ANO</p>
+                    <p>COR</p>
+                  </div>
+                </figcaption>
+                <button class="det__btn3">Detalhes</button>
+              </figure>
+  
+              <div class="card__details3">
+                <p class="card__type">Valor</p>
+                <h6 class="card__price"><sup>R$</sup>6.500 <sub>/12X</sub></h6>
+                <div class="card__feactures">
+                  <div class="feacture">12 Meses de garântia</div>
+                  <div class="feacture">1º Manutenção grátis</div>
+                  <div class="feacture">Ar-condicionado</div>
+                </div>
+                <button class="buy__btn3">Add Carrinho</button>
+              </div>
+            </div>
+          </div>
+
+        <script>
+          document.querySelectorAll("button").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              if (btn.className === "det__btn") {
+                document.querySelector(".card__details").classList.add("open");
+              }
+
+              if (btn.className === "buy__btn") {
+                document
+                  .querySelector(".card__details")
+                  .classList.remove("open");
+              }
+            });
+          });
+
+          document.querySelectorAll("button").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              if (btn.className === "det__btn2") {
+                document.querySelector(".card__details2").classList.add("open");
+              }
+
+              if (btn.className === "buy__btn2") {
+                document
+                  .querySelector(".card__details2")
+                  .classList.remove("open");
+              }
+            });
+          });
+
+          document.querySelectorAll("button").forEach((btn) => {
+            btn.addEventListener("click", () => {
+              if (btn.className === "det__btn3") {
+                document.querySelector(".card__details3").classList.add("open");
+              }
+
+              if (btn.className === "buy__btn3") {
+                document
+                  .querySelector(".card__details3")
+                  .classList.remove("open");
+              }
+            });
+          });
+
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

@@ -1,0 +1,150 @@
+/*variaveis de cores para facilitar edição de coloração da pag*/
+:root{
+    --bg-color-basebg: #3B2754;
+    --bg-color-purple-light: #632BAA;
+    --bg-color-purple-stk: #3C104B;
+    --bg-color-purple-soft: #3C104B;
+    --bg-color-white: #FFFFFF;
+    --bg-color-yellow: #f58300;
+}
+
+/*config padrão de estilização pra toda pag*/
+*{
+
+    margin: 0;
+    font-family: "Bebas Neue", sans-serif;
+    /*font-family: "Poppins", sans-serif;*/ /*fonte para caixa comum*/
+}
+
+body{
+    
+    margin: 0;
+    display: flex;
+}
+
+/*alteração do tamanho da imagem*/
+.logo-icon{
+
+    margin-left: 5.5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 13.6rem;
+    height: 13.6rem;
+}
+
+/*config localização do menu e tamanho do grid*/
+.main-menu{
+    
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    width: 23rem;
+    height: 100vh;
+    margin: 0.5rem;
+    background-color: var(--bg-color-basebg);
+}
+
+/*ajuste do menu*/
+.nav-bar{
+    margin-right: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: block;
+}
+
+/*intens da lista*/
+.nav-list{
+    margin-top: 1.5rem;
+
+    display: block;
+    list-style: none;
+}
+
+/*links do menu*/
+.nav-list a{
+    
+    margin: 1.2rem;
+    color: var(--bg-color-white) ;
+    text-decoration: none;
+
+    font-weight: 700;
+    font-size: 2.5rem;
+
+}
+
+.nav-bar a:hover{
+    color: var(--bg-color-yellow);
+}
+
+/*informações de usuarios tab lateral*/
+
+.container-right{
+    margin-left: 1.2rem;
+    display: block;
+
+}
+
+.inf-user{
+    width: 76vw;
+    margin: 1.2rem ;
+    border-radius: 0.5rem;
+    background-color: var(--bg-color-purple-light);
+    display:flex;
+    align-items: normal;
+    justify-content: center;
+}
+
+.infos-funci{
+
+    margin: 2.8rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-color-white);
+    font-family: "Poppins", sans-serif;  
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.history{
+
+    width: 76vw;
+    margin: 1.2rem ;
+    border-radius: 0.5rem;
+    background-color: var(--bg-color-purple-light);
+    display:block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.history h1{
+    font-size: 5rem;
+    margin-left: 35rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-color-white);
+}
+
+.history p {
+    margin: 2.8rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-color-white);
+    font-family: "Poppins", sans-serif;  
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.p01{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background-color: var(--bg-color-purple-stk);
+}
+
+.p02{
+    font-size: 1.2rem;
+    padding: 0.2 rem;
+    border-radius: 6px;
+    background-color: var(--bg-color-purple-soft);
+}

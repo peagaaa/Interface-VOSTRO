@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #070705;
+  display: flex;
+}
+
+.data {
+  display: flex;
+  justify-content: center;
+  color
+}
+.horadata {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+}
+
+.BG-OPTIONS li {
+  list-style: none;
+  text-align: center;
+}
+
+.BG-OPTIONS li a {
+  text-decoration: none;
+  color: #669999;
+}
+
+.CAMPO-OPCOES {
+  background-color: #89a09a;
+  text-align: center;
+  width: 389px;
+  margin: 56px auto 0px;
+  padding: 45px 10px 45px 10px;
+  border-radius: 6px;
+}
+
+.Options_Funcionario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BG-OPTIONS {
+  background-color: #c1c0ae;
+  padding: 10px;
+  border-radius: 6px;
+  width: 340px;
+  margin-top: 10px;
+}
+
+.CAMPO-OPCOES img {
+  width: 172px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 1450px) {
+  .CAMPO-OPCOES {
+    background-color: #89a09a;
+    text-align: center;
+    width: 22rem;
+    margin: 1.2rem auto 0rem;
+    padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+    border-radius: 6px;
+  }
+
+  .BG-OPTIONS {
+    background-color: #c1c0ae;
+    padding: 0.25rem;
+    border-radius: 6px;
+    width: 20rem;
+    margin-top: 0.3rem;
+  }
+
+  .CAMPO-OPCOES img {
+    width: 11rem;
+    padding-top: 0.5rem;
+    padding-bottom: 1.2rem;
+  }
+}

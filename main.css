@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+
+/*----------------------------------------------------------------------*/
+/*declaração de variaveis com para padronização de estilo*/
+:root{
+    --bg-color-basebg: #3B2754;
+    --bg-color-purple-light: #632BAA;
+    --bg-color-purple-stk: #3C104B;
+    --bg-color-purple-soft: #3C104B;
+    --bg-color-white: #FFFFFF;
+    --bg-color-yellow: #f58300;
+    --bg-color-radius: #ff0054;
+
+
+    --bg-color-main-menu: #9311bb;
+    --bg-color-darkmode: #290342;
+}
+/*----------------------------------------------------------------------*/
+
+/*estilização padrão para decorrer todo codigo*/
+*{
+
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+/*----------------------------------------------------------------------*/
+
+/*definição do tema padrão claro*/
+body{
+    background-color: var(--bg-color-white);
+    color: var(--bg-color-darkmode);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+
+
+
+}
+/*----------------------------------------------------------------------*/
+
+/*predefinição pro tema escuro*/
+body.dark{
+    background: var(--bg-color-darkmode);
+    color:var(--bg-color-white);
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+/*----------------------------------------------------------------------*/
+/*adiciona moimento ao seletor de temas*/
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+
+/*01-estilização da moldura do seletor*/
+.seletor{
+
+    background-color: var(--bg-color-purple-light);
+    cursor: pointer;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.2);
+
+}
+
+/*02-estilização dos icones do seletor*/
+.seletor i{
+    color: var(--bg-color-white);
+}
+
+/*03-estilização da bolinha que se movimenta no seletor*/
+.seletor .bola{
+
+    background-color: var(--bg-color-purple-stk);
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translate(0px);
+    transition: transform 0.2s linear;
+
+}
+
+/*04-parte de animação da bolinha do seletor*/
+.checkbox:checked + .seletor .bola{
+    transform: translate(24px);
+}
+
+
+
+/*----------------------------------------------------------------------*/
+/* estilização de estrutura do header*/
+.header{
+    
+    background-color: var(--bg-color-purple-soft);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all ,25s ease;
+}
+.header img{
+
+    margin-left: 9rem;
+    width: 6rem;
+    height: 6rem;
+}
+
+/*----------------------------------------------------------------------*/
+
+/*estilização de localização do escopo do header*/
+.container-head{
+    display: flex;
+    margin-right: 2%;
+
+}
+/*estilização de icone de logo e edição de texto*/
+
+
+/*----------------------------------------------------------------------*/
+/*estilização da barra de navegação*/
+
+/*01-centralização dos elementos da nav*/
+.nav-bar{
+    display: flex;
+
+}
+
+/*02-estilização das fontes da nav bar*/
+.nav-bar a{
+
+    font-weight: 600;
+    padding: 5px 0;
+    margin:0px 30px;
+    font-size: 1.1rem;
+    color: var(--bg-color-white);
+    transition: all .25s ease;
+}
+/*03-interatividade e animação da barra de navegação*/
+.nav-bar a:hover{
+    color: var(--bg-color-yellow);
+}
+
+.nav-bar a.ativo{
+    color: var(--bg-color-yellow);
+}
+
+/*----------------------------------------------------------------------*/
+/*estilização da div login/matricule-se*/
+
+/*01-centilização dos elementos*/
+.log{
+    
+    align-items: center;
+    display: flex;
+}
+
+/*02-estilização dos links*/
+.log a{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: var(--bg-color-white);
+    padding: 3px 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all .35s ease;
+}
+
+/*03-centralização do icone de usuario*/
+.user{
+
+    display: flex;
+    align-items: center;
+}
+
+/*04-estilização do icone de usuario*/
+.user i{
+
+    margin-right: 7px;
+    font-size: 1.9rem;
+    color:  var(--bg-color-white);
+
+}
+
+/*05-interatividade e animação dos links*/
+.log a:hover{
+
+    color: var(--bg-color-yellow);
+}
+
+/*----------------------------------------------------------------------*/
+/*responsividade para celular*/
+
+/*estilização do icone do menu hamburguer*/
+#menu-icon{
+
+    z-index: 10001;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--bg-color-white);
+    display: none;
+}
+
+/*configs de interatividade por mediaquerie do css para telas menores*/
+@media(max-width: 1450px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+
+    .nav-bar a{
+        padding: 5px 0;
+        margin: 0px 20 px;  
+    }
+}
+
+/*----------------------------------------------------------------------*/
+/*responsividade com o menu hamburguinho*/
+
+/* parte responsavel pelo ajuste da barra de menu em telas menores progredindo a partir do tamanho de 1390 px*/
+@media(max-width: 1390px){
+    #menu-icon{
+        display: block;
+    }
+    
+    .nav-bar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 35vh;  
+        background: var(--bg-color-main-menu) ;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .35s ease;
+
+    }
+
+    .nav-bar a{
+        display: block;
+        margin: 0.6rem 0rem;
+        padding: 0rem 0.5rem;
+        transform: all .35s ease;
+
+    }
+    .nav-bar a:hover{
+        font-weight: 700;
+        color: var(--bg-color-yellow);
+        transform: translateY(5px);
+
+    }
+    .nav-bar a.ativo{
+        font-weight: 700;
+        color: var(--bg-color-yellow);
+    }
+
+    .nav-bar.open{
+        right: 4%;
+    }
+}
+
+
+/*----------------------------------------------------------------------*/
+/* configs do slider*/
+.container-slider{
+    display: block;
+}
+.slider{
+    
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.slider-content{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.slider-content input, .img-mobile{
+    display: none;
+}
+
+.slide-box{
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.slide-box img{
+
+    width: 100%;
+}
+
+.nav-manual, .nav-auto{
+    
+    position: absolute;
+    width: 100%;
+    margin-top:26%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+    border: 1px solid var(--bg-color-radius);
+    padding: 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 0.8rem;
+}
+
+.nav-manual .manual-btn:hover{
+    background-color: var(--bg-color-radius);
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: var(--bg-color-radius);
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+
+
+
+.container{
+    display: block;
+}
+
+.container-body{
+    margin-top: 5%;
+    display: flex;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+/*Estilização dos cards*/

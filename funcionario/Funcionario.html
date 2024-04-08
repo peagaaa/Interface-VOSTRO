@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VOSTRO | Logado</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="CAMPO-OPCOES">
+      <div class="container"> </div>
+
+      <div class="data">
+        <p id="dia"></p>
+        <span> / </span>
+
+        <p id="mes"></p>
+        <span> / </span>
+
+        <p id="ano"></p>
+      </div>
+
+      <div class="horadata">
+        <p id="hora"></p>
+        <span>:</span>
+
+        <p id="minuto"></p>
+        <span>:</span>
+
+        <p id="segundo"></p>
+      </div>
+
+      <script>
+        let dataAtual = new Date();
+        document.getElementById("dia").innerHTML = dataAtual.getDate();
+        document.getElementById("mes").innerHTML = dataAtual.getMonth() + 1;
+        document.getElementById("ano").innerHTML = dataAtual.getFullYear();
+
+        document.getElementById("hora").innerHTML = dataAtual.getHours();
+        document.getElementById("minuto").innerHTML = dataAtual.getMinutes();
+        document.getElementById("segundo").innerHTML = dataAtual.getSeconds();
+      </script>
+
+      <img src="./Assets/Imagem usuário.png" alt="Icone foto do usuário" />
+
+      <div class="Options_Funcionario">
+        <div class="BG-OPTIONS">
+          <li>
+            <a href="#"> CADASTRO DE CLIENTES </a>
+          </li>
+        </div>
+
+        <div class="BG-OPTIONS">
+          <li>
+            <a href="#"> CONSULTA DE ESTOQUE </a>
+          </li>
+        </div>
+
+        <div class="BG-OPTIONS">
+          <li>
+            <a href="#"> PROJEÇÃO </a>
+          </li>
+        </div>
+
+        <div class="BG-OPTIONS">
+          <li>
+            <a href="#"> CONSULTA DE CLIENTES </a>
+          </li>
+        </div>
+
+        <div class="BG-OPTIONS">
+          <li>
+            <a href="#"> NEGOCIAÇÕES </a>
+          </li>
+        </div>
+
+        <div class="BG-OPTIONS">
+          <li>
+            <a href="#"> SERVIÇOS </a>
+          </li>
+        </div>
+
+        <div class="BG-OPTIONS">
+          <li>
+            <a href="#"> CHAT </a>
+          </li>
+        </div>
+
+        <div class="BG-OPTIONS">
+          <li>
+            <a href="#"> VENDA </a>
+          </li>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
